@@ -30,7 +30,7 @@ def pre_processing(func):
             # Get argnames and values passed to function and it's defaults
             ###########################################
             # arg_names = func.__code__.co_varnames[1:] # skip self
-            arg_names = inspect.getargspec(func).args[1:]
+            arg_names = inspect.getfullargspec(func).args[1:]
             all_args_dict= {arg_name:arg for arg_name, arg in zip(arg_names, args)}
             all_args_dict.update(kwargs)
 

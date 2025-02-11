@@ -1,5 +1,6 @@
 # wzero
-Weightless Neural Networks Library
+Fork of the Weightless Neural Networks Library from https://github.com/alanbacellar/wzero
+
   - A Collecation of Weghtless models implementd in in paralellized C++ code with a python binding.
     - WiSARD
     - Bleaching WiSARD
@@ -17,7 +18,7 @@ Weightless Neural Networks Library
  make
  ```
  
- Mnist Example:
+## Mnist Example:
  ```python
  import wzero as wz
  
@@ -27,3 +28,10 @@ Weightless Neural Networks Library
  
  print(data)
  ```
+
+If you are getting an error with the dataset, you'll need to clone mnist yourself:
+```
+git clone https://github.com/sunsided/mnist
+cp -r mnist/* some/path/.
+python create_dataset.py
+```
